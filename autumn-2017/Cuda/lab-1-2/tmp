@@ -1,0 +1,6 @@
+Vector size                    is 16777216 elements
+Threads per block              is 1024 elements
+Blocks per grid                is 16384 elements
+Elapsed time for cudaMalloc()  is 0.001457 sec
+Elapsed time for cudaMemcpy()  is 0.287660 sec
+Elapsed time for cudaCompute() is 21.732161 sec

@@ -1,0 +1,30 @@
+ssh-keygen -t rsa
+
+scp .ssh/id_rsa.pub user@jet.cpct.sibsutis.ru:
+
+ssh user@jet.cpct.sibsutis.ru "cat ./id_rsa.pub >> .ssh/authorized_keys"
+
+ssh -X
+
+http://laptops.eng.uci.edu/software-installation/using-linux/configure-ubuntu-for-x11-forwarding
+
+############################################################################
+
+/etc/ssh/ssh_config
+
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+############################################################################
+#PBS -N Config
+#PBS -l nodes=1:ppn=2
+#PBS -j oe
+cd $PBS_O_WORKDIR
+env
+cat $PBS_NODEFILE 
+sleep 20
+
+
+cat dcs_lab1.o3428 | grep "PBS_"
+
+###########################################################################

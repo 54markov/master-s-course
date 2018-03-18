@@ -1,0 +1,38 @@
+gcc -g -o sdot_sse sdot_sse.c -std=c99 -msse3
+gcc -g -o sdot_avx sdot_avx.c -std=c99 -mavx
+
+######################### SDOT ###########################
+
+SDOT sse                 : n = 1000003
+Result (scalar)          : 6000018.000000 err = 0.000000
+Elapsed time (scalar)    : 0.004628 sec.
+Result (vectorized)      : 6000018.000000 err = 0.000000
+Elapsed time (vectorized): 0.002405 sec.
+Speedup sse              : 1.92
+SDOT avx                 : n = 1000003
+Result (scalar)          : 6000018.000000 err = 0.000000
+Elapsed time (scalar)    : 0.004683 sec.
+Result (vectorized)      : 6000018.000000 err = 0.000000
+Elapsed time (vectorized): 0.004138 sec.
+Speedup avx              : 1.13
+
+##########################################################
+
+rm -rf sdot_sse sdot_avx
+gcc -g -o sqrt_sse sqrt_sse.c -std=c99 -msse3 -lm
+gcc -g -o sqrt_avx sqrt_avx.c -std=c99 -mavx -lm
+
+######################### LOOP-IF #########################
+
+Tabulate sqrt sse        : n = 1000007
+Elapsed time (scalar)    : 0.012105 sec.
+Elapsed time (vectorized): 0.004645 sec.
+Speedup                  : 2.61
+Tabulate sqrt avx        : n = 1000007
+Elapsed time (scalar)    : 0.011944 sec.
+Elapsed time (vectorized): 0.005205 sec.
+Speedup                  : 2.29
+
+##########################################################
+
+rm -rf sqrt_sse sqrt_avx

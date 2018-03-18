@@ -1,0 +1,1 @@
+In computer science, an FM-index is a compressed full-text substring index based on the Burrows-Wheeler a 

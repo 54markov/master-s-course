@@ -1,0 +1,29 @@
+#PBS -N dcs_lab1
+#PBS -l nodes=2:ppn=2
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+
+#string="3434.jet.cluster.local"
+string=$PBS_JOBID
+
+col_m1=0
+
+row_m1=$(echo $string | tr -dc '0-9')
+let "col_m1 = 2 * row_m1"
+
+foo=${string#$row_m1"."}
+foo1=${foo%%.*}
+
+col_m2=${#foo1} 
+
+echo "1 M "$row_m1
+echo "1 N "$col_m1
+echo "2 M "$col_m1
+echo "2 P "$col_m2
+
+cat $PBS_NODEFILE
+
+./task $row_m1 $col_m1 $col_m1 $col_m2
+
+sleep 40

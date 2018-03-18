@@ -1,0 +1,88 @@
+aaa_bbb -- bbaaa_b
+aa_bbba -- bbbaaa_
+a_bbbaa -- _bbbaaa
+_bbbaaa -- a_bbbaa
+bbbaaa_ -- baaa_bb
+bbaaa_b -- aaa_bbb
+baaa_bb -- aa_bbba
+key: b_aabba
+Input: 
+b
+_
+a
+a
+b
+b
+a
+
+b_
+_a
+aa
+aa
+bb
+bb
+ab
+
+
+b_a
+_aa
+aaa
+aab
+bb_
+bbb
+abb
+
+
+b_aa
+_aaa
+aaab
+aabb
+bb_a
+bbb_
+abbb
+
+
+b_aaa
+_aaab
+aaabb
+aabbb
+bb_aa
+bbb_a
+abbb_
+
+
+b_aaab
+_aaabb
+aaabbb
+aabbb_
+bb_aaa
+bbb_aa
+abbb_a
+
+
+b_aaabb
+_aaabbb
+aaabbb_
+aabbb_a
+bb_aaab
+bbb_aaa
+abbb_aa
+
+
+_aaabbb
+aaabbb_
+aabbb_a
+abbb_aa
+b_aaabb
+bb_aaab
+bbb_aaa
+
+Output: _bbbaaa
+-> original = aaa_bbb
+-> encoded  = 0 0 0 1 0 0 
+0	: 1
+0	: 1
+0	: 1
+1	: 01
+0	: 1
+0	: 1

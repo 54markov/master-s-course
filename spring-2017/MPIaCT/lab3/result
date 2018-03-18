@@ -1,0 +1,25 @@
+define n: 3
+asyncPipeline run elapsed ticks for 10000 (elements): 83088
+
+define n: 4
+asyncPipeline run elapsed ticks for 10000 (elements): 83605
+ 
+define n: 5
+asyncPipeline run elapsed ticks for 10000 (elements): 83553
+
+define n: 6
+asyncPipeline run elapsed ticks for 10000 (elements): 84053
+
+define n: 7
+asyncPipeline run elapsed ticks for 10000 (elements): 84093
+
+define n: 8
+asyncPipeline run elapsed ticks for 10000 (elements): 84159
+
+define n: 9
+asyncPipeline run elapsed ticks for 10000 (elements): 84354
+
+define n: 10
+asyncPipeline run elapsed ticks for 10000 (elements): 84486
+
+
